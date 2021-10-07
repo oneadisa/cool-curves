@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    /* background-color: whitesmoke; */
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 35px;
+    color: gray;
+    background: #f4e1d2;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.red {
+    background-color: #f7cac9;
+}
+
+.orange {
+    background-color: #e5b5e5;
+}
+
+.yellow::after {
+    content: '';
+    border-top-right-radius: 50% 100%;
+    border-top-left-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #e5e5b6;
+    z-index: -1;
+}
+
+.green {
+    background-color: #f7cac9;
+    ;
+    z-index: -2;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0px;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #e5b5e5;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #f7cac9;
+    transform: translate(-4%, 40%);
+    z-index: 1;
+}
+
+.custom-shape-divider-top-1633525593 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1633525593 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 173px;
+}
+
+.custom-shape-divider-top-1633525593 .shape-fill {
+    fill: #e5e5b6;
+}
+
+
+/** For tablet devices **/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1633525593 svg {
+        width: calc(111% + 1.3px);
+        height: 194px;
+    }
+}
+
+.spacer {
+    aspect-ratio: 969/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('./layer-1.svg');
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+    z-index: -1;
+}
